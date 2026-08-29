@@ -1,24 +1,13 @@
-import { APITester } from "./APITester";
-import "./index.css";
+import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
+import HomePage from "./pages/HomePage"
 
-import logo from "./logo.svg";
-import reactLogo from "./react.svg";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+]);
 
 export function App() {
-  return (
-    <div className="app">
-      <div className="logo-container">
-        <img src={logo} alt="Bun Logo" className="logo bun-logo" />
-        <img src={reactLogo} alt="React Logo" className="logo react-logo" />
-      </div>
-
-      <h1>Bun + React</h1>
-      <p>
-        Edit <code>src/App.tsx</code> and save to test HMR
-      </p>
-      <APITester />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
-
-export default App;

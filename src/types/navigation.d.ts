@@ -1,8 +1,3 @@
-declare module '*.png' {
-  const value: string;
-  export default value;
-}
-
 type NavigationButtonProps = {
   onClick: () => void;
   children: React.ReactNode;

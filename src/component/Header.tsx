@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Header.css"
+import logo from '../assets/logo.png'; 
 
 export default function Header() {
   // State to manage mobile menu toggle
@@ -10,10 +11,11 @@ export default function Header() {
       
       {/* Navigation Links */}
       <nav className={`nav-links ${isOpen ? "open" : ""}`}>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <img src={logo} alt="FGC logo" className="logo-header"/>
+        <button>Forums</button>
+        <button>Matches</button>
+        <button>Events</button>
+        <button>Stats</button>
       </nav>
 
       {/* Hamburger Icon for Mobile */}

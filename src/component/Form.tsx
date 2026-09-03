@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Form.css';
 
 function Form() {
   const [text, setText] = useState("");
@@ -16,6 +17,7 @@ function Form() {
       value={text}
       onChange={handleChange}
       placeholder="Search..."
+      className="my-form"
     />
   );
 }
